@@ -7,6 +7,7 @@ const TodoInput = () => {
   const dispatch = useDispatch()
   const add = (e) => {
     e.preventDefault()
+    if(!input) return
     dispatch(addTodo(input))
     setInput("")
   }
